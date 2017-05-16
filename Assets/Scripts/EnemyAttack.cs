@@ -39,7 +39,7 @@ public class EnemyAttack : MonoBehaviour {
 
 		IEnumerator attack() {
 
-		if (playerInRange && !GameManager.instance.GameOver) {
+		if (playerInRange && !GameManager.instance.GameOver && enemyHealth.IsAlive) {
 			anim.Play ("Attack");
 			yield return new WaitForSeconds (timeBetweenAttacks);
 		}
